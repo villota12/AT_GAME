@@ -20,7 +20,7 @@
         }
         .container {
             max-width: 600px;
-            margin: auto;
+            margin-bottom: 60px;
             background: #ffffff;
             padding: 20px;
             border-radius: 10px;
@@ -73,6 +73,12 @@
             border-radius: 5px;
             padding: 5px;
         }
+
+        #q{
+            margin-top: 40px;
+            background-color: #165d4e;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -80,6 +86,9 @@
         <h2>Select an Option</h2>
         <button onclick="showInterface('journal')">General Journal</button>
         <button onclick="showInterface('adjusting')">Adjusting Entries</button>
+        <a href="https://villota12.github.io/AT/">
+            <button id="q">Exit Game</button>
+        </a>
     </div>
 
     <div id="journal-interface" class="container hidden">
