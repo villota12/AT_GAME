@@ -13,9 +13,10 @@
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 20px;
-            background: linear-gradient(to right, #154628, #0a4c4c);
+            /* background: linear-gradient(to right, #154628, #0a4c4c);
             background-repeat: no-repeat;
-            background-attachment: fixed;
+            background-attachment: fixed; */
+            background-color: white;
             color: #064509;
         }
         .container {
@@ -26,7 +27,10 @@
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .hidden { display: none; }
+        .hidden { 
+            display: none; 
+        }
+
         .entry {
             border: 1px solid #c8e6c9;
             padding: 10px;
@@ -36,8 +40,8 @@
             text-align: left;
         }
         button {
-            background-color: #dbe0df1f;
-            color: rgb(41, 176, 41);
+            background-color: #165d4e;
+            color: white;
             border: none;
             padding: 10px 15px;
             cursor: pointer;
@@ -55,8 +59,8 @@
             width: 150px;
             text-align: center;
             display: none;
-            background-color: white;
-            color: #064509;
+            background-color: #165d4e;
+            color: white;
         }
         .add-button-container {
             text-align: center;
@@ -76,14 +80,23 @@
 
         #q{
             margin-top: 40px;
-            background-color: #165d4e;
-            color: white;
+            background-color: rgba(178, 198, 177, 0.178);
+            color: #165d4e;
+        }
+
+        p{
+            font-size: 16px;
+        }
+
+        h2{
+            font-size: 30px;
         }
     </style>
 </head>
 <body>
     <div id="main-menu" class="container">
-        <h2>Select an Option</h2>
+        <h2>Let's Master this!</h2>
+        <p style="margin-bottom: 50px;"  >Challenge yourself in mastering journal and adjusting entries! Choose an option below to start answering AI-generated questions and enhance your accounting skills.</p>
         <button onclick="showInterface('journal')">General Journal</button>
         <button onclick="showInterface('adjusting')">Adjusting Entries</button>
         <a href="https://villota12.github.io/AT/">
@@ -92,7 +105,8 @@
     </div>
 
     <div id="journal-interface" class="container hidden">
-        <h2>Welcome to Mastering Journal</h2>
+        <h2>Welcome to<br>Mastering Journal</h2>
+        <p>Test your knowledge and improve your skills in recording journal entries. Click the + button to start answering AI-generated questions.</p>
         <div id="journal-entries"></div>
         <div class="add-button-container">
             <button onclick="createEntry('journal')">+</button>
@@ -100,7 +114,8 @@
     </div>
 
     <div id="adjusting-interface" class="container hidden">
-        <h2>Welcome to Adjusting Entries</h2>
+        <h2>Welcome to<br>Adjusting Entries</h2>
+        <p>Enhance your understanding of adjusting journal entries by answering AI-generated questions. Click the + button to begin.</p>
         <div id="adjusting-entries"></div>
         <div class="add-button-container">
             <button onclick="createEntry('adjusting')">+</button>
